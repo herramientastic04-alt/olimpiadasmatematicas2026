@@ -1,0 +1,109 @@
+OLIMPIADAS MATEMÁTICAS 2026, COMPETENCIA POR GRUPOS
+Institución Educativa El Guineo, Canalete, Córdoba
+
+
+QUÉ HAY EN ESTA CARPETA
+
+public/index.html
+    El programa completo.
+
+netlify/functions/api.mjs
+    El servidor que guarda en la base de datos de Netlify (Netlify Blobs)
+    los grupos, las fotos, las preguntas, las imágenes, la competencia en
+    curso y el ranking. No pide inicio de sesión.
+
+netlify.toml y package.json
+    Configuración que Netlify lee sola. No hay que cambiarla.
+
+
+PUBLICAR EN NETLIFY
+
+Opción 1, arrastrando (la más fácil):
+1. Entre a app.netlify.com con su cuenta.
+2. Elija "Add new project" y luego "Deploy manually" (o entre a
+   app.netlify.com/drop).
+3. Arrastre la carpeta OlimpiadasNetlify completa.
+4. Cuando termine, entre al proyecto y abra la sección "Functions".
+   Debe aparecer la función api. Si aparece, ya quedó listo.
+
+Si en "Functions" no aparece nada, use la opción 2.
+
+Opción 2, con GitHub:
+1. En github.com cree un repositorio nuevo y, con "Add file" y luego
+   "Upload files", suba el CONTENIDO de la carpeta OlimpiadasNetlify
+   (las carpetas public y netlify, y los archivos netlify.toml,
+   package.json y LEEME.txt). Presione "Commit changes".
+2. En app.netlify.com elija "Add new project", luego
+   "Import an existing project", luego GitHub, y seleccione el
+   repositorio. No cambie nada y presione "Deploy".
+3. En la sección "Functions" debe aparecer la función api.
+
+
+COMPROBAR QUE GUARDA EN NETLIFY
+
+Abra la dirección del sitio (termina en netlify.app). Arriba a la derecha
+el botón de guardado debe decir "Guardado en Netlify" con un punto verde.
+Si dice "Solo en este equipo", tóquelo y elija "En Netlify, en línea".
+
+
+CLAVE (OPCIONAL)
+
+El programa no pide clave. Si quiere que solo los docentes puedan cambiar
+los datos, en Netlify entre a "Project configuration", luego
+"Environment variables", y cree la variable CLAVE_DOCENTE con la clave
+que quiera. Luego publique de nuevo (Deploys, Trigger deploy). Desde ese
+momento el programa pedirá la clave una sola vez en cada equipo.
+
+
+VERSIÓN LOCAL, SIN INTERNET
+
+El archivo OlimpiadasMatematicasINEDEGUI2026Local.html funciona con doble
+clic, sin internet y sin Netlify. Todo queda en la memoria de ese
+navegador. Para pasar los datos de un equipo a otro use, al pie de la
+página, "Guardar copia en este equipo" y luego "Cargar una copia".
+
+
+RANKING EN VIVO PARA PROYECTAR
+
+El botón "Ranking en vivo" muestra las dos competencias y se actualiza
+solo. En la versión de Netlify se puede abrir en otro computador, en un
+televisor o en los celulares: es la misma dirección del sitio terminada
+en #vivo. En la versión local se abre en otra ventana del mismo equipo.
+
+
+AGREGAR PREGUNTAS CON TEXTO
+
+En cada competencia, botón "Preguntas" y luego "Agregar preguntas con
+texto". Ejemplo:
+
+    Tema: Cálculo mental
+    Pregunta: ¿Cuál es el triple de 15?
+    A) 30
+    B) 45
+    C) 50
+    D) 35
+    Respuesta: B
+    Explicación: 15 por 3 es 45.
+
+O en una sola línea, separada con barras, con la letra correcta al final:
+
+    ¿Cuántos lados tiene un hexágono? | 5 | 6 | 8 | 7 | B
+
+Deje una línea en blanco entre preguntas. En la vista previa puede
+agregar una imagen a cada pregunta.
+
+
+REINICIAR TODO
+
+En la página de inicio, abajo, y también en el botón de guardado, está
+"Reiniciar todo". Borra los grupos con sus fotos, las competencias en
+curso, los rankings, las preguntas nuevas, las imágenes y los cambios a
+las preguntas. Deja el programa como al inicio, con las 15 preguntas
+originales de cada competencia.
+
+No borra de una vez: primero pregunta si está seguro y hay que escribir
+"sí" para que se active el botón "Borrar todo". Antes de borrar puede
+guardar una copia con el botón "Guardar una copia antes".
+
+En la versión de Netlify borra también lo guardado en Netlify, para todos
+los equipos. Si se creó la variable CLAVE_DOCENTE, además pide la clave.
